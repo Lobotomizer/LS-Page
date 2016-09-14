@@ -1,0 +1,39 @@
+<!-- Header -->
+<header id="header" {% if page.layout=='landing' %} class="alt" {% endif %}>
+    <h1><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></h1>
+
+    <nav id="nav">
+        <ul>
+            <li class="special">
+                <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                <div id="menu">
+                    <ul class="cd-accordion-menu animated">
+                        <li><a href="{{ site:path }}/index.html">Home</a></li>
+                        <li class="has-children">
+                            <input type="checkbox" name="group-1" id="group-1">
+                            <label for="group-1">Private</label>
+                            <ul>
+                                {% for my_page in site.pages %} {% if my_page.type == "both" or my_page.type == "private" %} {% if my_page.title %}
+                                <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                                {% endif %} {% endif %} {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <input type="checkbox" name="group-2" id="group-2">
+                            <label for="group-2">Business</label>
+                            <ul>
+                                {% for my_page in site.pages %} {% if my_page.type == "both" or my_page.type == "business" %} {% if my_page.title %}
+                                <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                                {% endif %} {% endif %} {% endfor %}
+                            </ul>
+                        </li>
+                        <li><a href="{{ site:path }}/9_contact.html">Contact</a></li>
+                        <!-- <li><a href="#">Sign Up</a></li> -->
+                        <!-- <li><a href="#">Log In</a></li> -->
+                        <li><a href="{{ " /feed.xml " | prepend: site.baseurl }}" class="icon fa-feed"> RSS Feed</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>

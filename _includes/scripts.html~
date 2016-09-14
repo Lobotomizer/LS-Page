@@ -1,0 +1,15 @@
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.scrollex.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/util.js"></script>
+<!-- Filterizr -->
+<script src="js/jquery.filterizr.min.js"></script>
+ <script type="text/javascript">
+      var filterizd = $('.filtr-container').filterizr({
+   //options object
+});
+    </script>
+<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+<script src="js/main.js"></script>
