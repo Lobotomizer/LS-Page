@@ -3,6 +3,7 @@ layout: artist
 type: artist
 title: Rumba de Bodas
 subtitle: Bologna Super Group
+genre: balkan
 bgimage: 2016_09_Rumba_de_Bodas_page.jpg
 ---
 <section class="wrapper style5">
@@ -31,11 +32,17 @@ bgimage: 2016_09_Rumba_de_Bodas_page.jpg
             <header>
                 <h4>Press</h4>
             </header>
-            <blockquote>They played more than 200 shows in China, the USA and Europe and gained several prices for their work. Together they form GINKGOA,- alias Nicolle Rochelle and Antoine Chatenet- and they create a colorful mix out of french chansons with american
-                vibes and american songs with french touch. Their musical influences lie in current pop melodies, Swing of the old New York and it reaches to modern Electro. Inspired by artists such as Caro Emerald or Caravan Palace, they are a real experience
-                when you see them live.</blockquote>
+            <blockquote>The perfect post-Carnival shot. The exuberant cabaret-swing of Rumba da Bodas returns after a series of sell out shows last year. Starting life as a loose collective in the backstreet music bars of Bologna, Italy, they fuse Latin, Ska, Balkan
+                and Swing ideas into an ever-changing musical mix. </blockquote>
             <p>
-                <sub>- <i>Schlachthof HNA</i></sub>
+                <sub>- <i>The List Edinburgh</i></sub>
+                <hr />
+                <h4>You might also like...</h4>
+                <ul class="actions fit small">
+                  {% for my_page in site.pages %} {% if my_page.genre == "balkan" or my_page.genre == "latin" %} {% if my_page.title %}
+                    <li><a class="button special fit" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                    {% endif %} {% endif %} {% endfor %}
+                </ul>
         </section>
 
     </div>
