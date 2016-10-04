@@ -8,14 +8,14 @@ subtitle: Meet the Ludwig Family
 
 <section>
     <h2>Live Roster</h2>
-    <ul id="live-roster" class="actions fit small">
-        <li data-filter="all"><a class="button special fit">All artist</a></li>
+    <ul class="actions fit small">
+        <li data-filter="all"><a class="button special fit">Live Roster</a></li>
         <li data-filter="1"><a class="button special fit">Vintage Electro</a></li>
         <li data-filter="2"><a class="button special fit">Balkan/World</a></li>
         <li data-filter="3"><a class="button special fit">Blues/Rock</a></li>
     </ul>
     <div class="box alt">
-        <div class="row uniform 50% filtr-container grid cs-style-6">
+        <div id="live-roster" class="row uniform 50% filtr-container grid cs-style-6">
             {% for my_page in site.pages %}
               {% if my_page.type == "live" %}
             <div class="4u filtr-item" data-category="{{ my_page.filtr }}" data-sort="value">
@@ -31,12 +31,13 @@ subtitle: Meet the Ludwig Family
 <hr/>
 <section>
     <h2>DJ Roster</h2>
-    <ul id="dj-roster" class="actions fit small">
-        <li data-filter="4"><a class="button special fit">Vintage Electro</a></li>
-        <li data-filter="5"><a class="button special fit">Global Bass</a></li>
+    <ul class="actions fit small">
+        <li data-filter="All"><a class="button special fit">DJ Roster</a></li>
+        <li data-filter="5"><a class="button special fit">Vintage Electro</a></li>
+        <li data-filter="4"><a class="button special fit">Global Bass</a></li>
     </ul>
     <div class="box alt">
-        <div class="row uniform 50% filtr-container grid cs-style-6">
+        <div id="dj-roster" class="row uniform 50% filtr-container grid cs-style-6">
             {% for my_page in site.pages %}
               {% if my_page.type == "dj" %}
             <div class="4u filtr-item" data-category="{{ my_page.filtr }}" data-sort="value">
