@@ -1,0 +1,53 @@
+/*! http://responsiveslides.com v1.55 by @viljamis */
+
+
+.artist-spotlight {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.artist-spotlight ul {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.artist-spotlight li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.artist-spotlight li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.artist-spotlight img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+  .slide-caption {
+    position: absolute;
+    display: block;
+    padding: 1em;
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: 2vw;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  }

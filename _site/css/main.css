@@ -1546,7 +1546,7 @@ input[type="radio"] + label:before {
   color: #ed4e6e; }
 
 .grid div.caption a {
-  font-size: 0.8em;
+  font-size: 1vw;
   color: #c8ece9;
   font-weight: bold; }
 

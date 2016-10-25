@@ -1,0 +1,45 @@
+---
+layout: page
+title: Contact
+subtitle: Let's get connected!
+---
+
+<?php if(!empty($errMsg)): ?><div class="errMsg"><?php echo $errMsg; ?></div><?php endif; ?>
+<?php if(!empty($succMsg)): ?><div class="succMsg"><?php echo $succMsg; ?></div><?php endif; ?>
+
+<section class="wrapper style5">
+    <div class="inner">
+              <section>
+    <h4>Please pull your request.</h4>
+    <form method="post" action="contact.php">
+      <div class="row uniform">
+        <div class="6u 12u$(xsmall)">
+          <input type="text" name="name" id="demo-name" value="<?php echo !empty($name)?$name:''; ?>" placeholder="Name" />
+        </div>
+        <div class="6u$ 12u$(xsmall)">
+          <input type="email" name="email" id="demo-email" value="<?php echo !empty($email)?$email:''; ?>" placeholder="Email" />
+        </div>
+        <div class="12u$">
+          <div class="select-wrapper">
+            <select name="category" id="category">
+              <option value="">- Category -</option>
+              <option value="1">Book an artist</option>
+              <option value="2">Assign for Event Consultant</option>
+              <option value="3">Wedding</option>
+              <option value="4">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="12u$">
+          <textarea name="message" id="message" placeholder="Enter your message" rows="6"><?php echo !empty($message)?$message:''; ?></textarea>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6Leq1gkUAAAAAMFDFxPFMsIF1vfofnLAjJ_omC_w"></div>
+        <div class="12u$">
+          <ul class="actions">
+            <li><input type="submit" value="SUBMIT" name="submit" class="special" /></li>
+            <li><input type="reset" value="Reset" /></li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </section>
