@@ -448,6 +448,14 @@ $baseurl: '{{ site.baseurl }}/images';
 		opacity: 1.0;
 	}
 
+/* Live Search */
+
+#livesearch {
+	background-color: _palette(fg-light);
+	padding-left: 1em;
+	position: fixed;
+}
+
 /* Box */
 
 	.box {
@@ -527,7 +535,14 @@ $baseurl: '{{ site.baseurl }}/images';
 		img {
 			border-radius: 3px;
 			display: block;
-		}
+
+				&.circle {
+				border-radius: 50%;
+				width: 80px;
+				height: 80px;
+				border: 2px solid #A52225;
+				}
+			}
 
 		&.left {
 			float: left;
@@ -560,6 +575,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+
 
 /* Roster Styles */
 
@@ -595,12 +611,14 @@ $baseurl: '{{ site.baseurl }}/images';
 }
 .cs-style-6 div img {
 	z-index: 10;
-	transition: transform 0.4s;
+	@include vendor('transition', 'transform #{_duration(menu)} ease');
 }
 
 .cs-style-6 div:hover img,
 .cs-style-6 div.cs-hover img {
 	transform: translateY(-25px) scale(0.75);
+	-webkit-transform: translateY(-25px) scale(0.75);
+	-moz-transform: translateY(-25px) scale(0.75);
 }
 
 
@@ -1521,14 +1539,15 @@ margin-bottom: 2em;
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base);
+		overflow: hidden;
+		padding: 0.2em;
 
 		h1 {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
 			height: inherit;
-			left: 1.25em;
+			float: left;
 			line-height: inherit;
-			position: absolute;
-			top: 0;
+			padding: 0em 0.2em;
 
 			a {
 				border: 0;
@@ -1543,12 +1562,26 @@ margin-bottom: 2em;
 			}
 		}
 
+		form {
+			display: block;
+			height: 2em;
+			line-height: inherit;
+			float: left;
+			width: 40%;
+
+			input {
+				width: 85%;
+				display: inline;
+				height: inherit;
+				font-family: 'FontAwesome';
+			}
+		}
+
 		nav {
 			height: inherit;
 			line-height: inherit;
-			position: absolute;
-			right: 0;
-			top: 0;
+			float: right;
+
 
 			> ul {
 				list-style: none;
@@ -1612,6 +1645,9 @@ margin-bottom: 2em;
 				@include vendor('pointer-events', 'none');
 				opacity: 0;
 			}
+		}
+		.clear {
+			clear: both;
 		}
 	}
 

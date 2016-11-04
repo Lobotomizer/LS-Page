@@ -1,0 +1,12 @@
+---
+
+---
+
+<pages>
+  {% for page in site.pages %}
+    <link>
+    <title>{{ page.title }}</title>
+    <url>{{ page.url }}</url>
+  </link>
+  {% endfor %}
+</pages>

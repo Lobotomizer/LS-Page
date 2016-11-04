@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ludwig Sound</title>
-    <description>Where past and present meets in Sound!</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Oct 2016 21:11:47 +0200</pubDate>
-    <lastBuildDate>Tue, 25 Oct 2016 21:11:47 +0200</lastBuildDate>
+    <description>Where past and present meet in Sound!</description>
+    <link>http://ludwigsound.com/</link>
+    <atom:link href="http://ludwigsound.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 04 Nov 2016 14:57:54 +0100</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2016 14:57:54 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -18,8 +18,8 @@
 &lt;section&gt;
 </description>
         <pubDate>Mon, 24 Oct 2016 00:00:00 +0200</pubDate>
-        <link>/2016/10/24/support_new_album_of_bomba_titinka.html</link>
-        <guid isPermaLink="true">/2016/10/24/support_new_album_of_bomba_titinka.html</guid>
+        <link>http://ludwigsound.com/2016/10/24/support_new_album_of_bomba_titinka/</link>
+        <guid isPermaLink="true">http://ludwigsound.com/2016/10/24/support_new_album_of_bomba_titinka/</guid>
         
         
       </item>
@@ -31,8 +31,8 @@
  Though we won&#39;t provide any stand this year, we are always around and flexible with appointments. So get in touch!
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 +0200</pubDate>
-        <link>/2016/10/20/ludwig-sound-on-womex.html</link>
-        <guid isPermaLink="true">/2016/10/20/ludwig-sound-on-womex.html</guid>
+        <link>http://ludwigsound.com/2016/10/20/ludwig-sound-on-womex/</link>
+        <guid isPermaLink="true">http://ludwigsound.com/2016/10/20/ludwig-sound-on-womex/</guid>
         
         
       </item>

@@ -1,11 +1,12 @@
 <!-- Header -->
 <header id="header" {% if page.layout=='landing' %} class="alt" {% endif %}>
 
+  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  <form>
+  <input placeholder="&#xf002;" aria-hidden="true" type="text" onkeyup="showResult(this.value)">
+  <div id="livesearch"></div>
+  </form>
 
-<form action="/search.html" method="get">
-  <input type="text" id="search-box" {% if page.type == "search" %} style="display: none" {% endif %} name="query">
-  <h1><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></h1>
-</form>
 
 
     <nav id="nav">
@@ -13,7 +14,7 @@
             <li class="special">
                 <a href="#menu" class="menuToggle"><span>Menu</span></a>
                 <div id="menu">
-                    <ul class="cd-accordion-menu animated">
+                    <!-- <ul class="cd-accordion-menu animated">
                         <li><a href="{{ site:path }}/index.html">Home</a></li>
                         <li class="has-children">
                             <input type="checkbox" name="group-1" id="group-1">
@@ -32,11 +33,13 @@
                                 <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
                                 {% endif %} {% endif %} {% endfor %}
                             </ul>
-                        </li>
+                        </li> -->
+                        <ul>
+                        <li><a href="{{ site.url }}">Home</a></li>
                         {% for my_page in site.pages %} {% if my_page.type == "misc" %} {% if my_page.title %}
                         <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
                         {% endif %} {% endif %} {% endfor %}
-                        <li><a href="9_contact.php">Contact</a></li>
+                        <li><a href="/contact.php">Contact</a></li>
                         <!-- <li><a href="#">Sign Up</a></li> -->
                         <!-- <li><a href="#">Log In</a></li> -->
                         <li><a href="{{ " /feed.xml " | prepend: site.baseurl }}" class="icon fa-feed"> RSS Feed</a></li>
@@ -45,4 +48,5 @@
             </li>
         </ul>
     </nav>
+  <div class="clear"></div>
 </header>

@@ -36,7 +36,7 @@ layout: landing
         <div class="content">
             <h2>Booking Agency</h2>
             <p><i>Ludwig Sound</i> is known as one of the leading booking agencies on the european scene. With more than 500 deals since we kick off in 2013, our expertise in intermediating artists is unchalllenged. Our Booking activities are mainly focused
-                on Europe with an rock-solid network in Italy, Germany, Switzerland, Austria and the UK. Have a dip into our artist roster gettin together leading <a href="{{ site.url }}/artist.html">artist</a> of Europes Live and DJ cartell.</p>
+                on Europe with an rock-solid network in Italy, Germany, Switzerland, Austria and the UK. Have a dip into our artist roster gettin together leading <a href="/artist">artist</a> of Europes Live and DJ cartell.</p>
         </div>
     </section>
     <section class="spotlight">
@@ -44,7 +44,7 @@ layout: landing
         <div class="content">
             <h2>Event Consulting</h2>
             <p>It's not only about having good artist booked than organizing the event itself on best way. That's why we are planning your events step by step everytime close to your ideas and image. La Notte Nera, Mercalingano Music Festival or Campari
-                are just a few in row of partners which were contributing by our services. <a href="{{ site.url }}/9_contact.php">Get in touch</a> for an initial and free consulation and let's get started an awesome event.</p>
+                are just a few in row of partners which were contributing by our services. <a href="/contact.php">Get in touch</a> for an initial and free consulation and let's get started an awesome event.</p>
         </div>
     </section>
     <section class="spotlight">
@@ -52,7 +52,7 @@ layout: landing
         <div class="content">
             <h2>Art direction for wedding</h2>
             <p>Bringing humans together was always one of our strengths. So why not going on if those decide for their probably biggest step in live. Like our original approach for projects, we are staying close to the client side ideas and contributing
-                where it fits. <i>LS</i> is collaborating with reliable and highly professional partners specialized in wedding organisation. Celebrating with <i>Ludwig Sound</i> makes your wedding as special as it should be. <a href="{{ site.url }}/9_contact.php">Ask for an consulatation.</a></p>
+                where it fits. <i>LS</i> is collaborating with reliable and highly professional partners specialized in wedding organisation. Celebrating with <i>Ludwig Sound</i> makes your wedding as special as it should be. <a href="/contact.php">Ask for an consulatation.</a></p>
         </div>
     </section>
 </section>
@@ -84,9 +84,13 @@ layout: landing
             </ul>
         </div>
         <hr/>
+        <h2>News</h2>
         <ul class="features">
             {% for post in site.posts %}
-            <li class="icon fa-group">
+            <li class="icon">
+              <span class="image left">
+                <img class="circle" src="images/{{ post.thumb }}">
+              </span>
                 <a href="{{ post.url }}"><h3>{{ post.title }}</h3>
 	      <p>{{ post.excerpt }}</p>
       </li>

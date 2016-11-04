@@ -8,6 +8,30 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
   <link rel="stylesheet" href="{{ "/css/responsiveslides.css" | prepend: site.baseurl }}" />
   <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+  function showResult(str) {
+    if (str.length==0) {
+      document.getElementById("livesearch").innerHTML="";
+      document.getElementById("livesearch").style.border="0px";
+      return;
+    }
+    if (window.XMLHttpRequest) {
+      // code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+    } else {  // code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function() {
+      if (this.readyState==4 && this.status==200) {
+        document.getElementById("livesearch").innerHTML=this.responseText;
+        document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+        document.getElementById("pagetitle").style.visibilty='hidden';
+      }
+    }
+    xmlhttp.open("GET","http://ludwigsound.com/livesearch.php?q="+str,true);
+    xmlhttp.send();
+  }
+  </script>
     <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
   <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">

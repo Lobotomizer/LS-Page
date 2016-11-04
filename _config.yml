@@ -3,20 +3,20 @@
 
 # Site settings
 title: Ludwig Sound
-description: Where past and present meets in Sound!
+description: Where past and present meet in Sound!
 owner: Ludwig Sound
 first_published: 2016 # if migrating another site, the year of your first publish
 email: info@ludwigsound.com
 baseurl: "" # the subpath of your site, e.g. /blog
 liveurl: "/artist/live-roster"
 djurl: "/artist/dj-roster"
-url: "" # the base hostname & protocol for your site
+url: "http://ludwigsound.com" # the base hostname & protocol for your site
 social:
   twitter: https://twitter.com/ludwigsound
   # github: https://github.com/ludwigsound
-  linkedin-square: https://linkedin.com/in/ludwigsound
+  # linkedin-square: https://linkedin.com/in/ludwigsound
   facebook-official: https://facebook.com/ludwigsound
-  google-plus-square: https://plus.google.com/u/0/+<username>
+  # google-plus-square: https://plus.google.com/u/0/+<username>
   email: mailto:info@ludwigsound.com
   #flickr:
   # instagram:
@@ -55,5 +55,6 @@ social:
 # Build settings
 markdown: kramdown
 exclude: [backup]
+permalink: pretty
 #sass:
 #  style: compressed
